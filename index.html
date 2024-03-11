@@ -4,6 +4,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BMI Calculator</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <main class="container">
+      <section>
+        <h1>BMI Calculator</h1>
+        <div id="form-container">
+          <form action="#" method="post" id="bmi-form">
+            <div>
+              <label for="jk" class="d-block">Jenis Kelamin</label>
+
+              <input type="radio" name="jk" id="jkpria" />
+              <label for="jkpria">Pria</label>
+
+              <input type="radio" name="jk" id="jkwanita" />
+              <label for="jkwanita">Wanita</label>
+            </div>
+
+            <div>
+              <label for="bb" class="d-block">Berat Badan (kg)</label>
+              <input
+                type="number"
+                name="bb"
+                id="bb"
+                placeholder="Masukkan berat badan"
+              />
+            </div>
+
+            <div>
+              <label for="usia" class="d-block">Usia (tahun)</label>
+              <input
+                type="number"
+                name="usia"
+                id="usia"
+                placeholder="Masukkan usia"
+              />
+            </div>
+
+            <div>
+              <label for="tb" class="d-block">Tinggi Badan (cm)</label>
+              <input
+                type="number"
+                name="tb"
+                id="tb"
+                placeholder="Masukkan tinggi badan"
+              />
+            </div>
+
+            <div class="button-group">
+              <button type="submit">Hitung BMI</button>
+              <button type="submit" class="reset">Reset</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section>
+        <div></div>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>
