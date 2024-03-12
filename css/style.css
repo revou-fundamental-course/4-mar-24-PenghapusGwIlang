@@ -10,9 +10,9 @@
   --secondary-color: #94a3b8;
   --tertiary-color: #f1f5f9;
   --stroke-color: #cbd5e1;
-  --green-color: #008137;
-  --yellow-color: #fbbf24;
-  --red-color: #dc2626;
+  --green-color: #008137 !important;
+  --yellow-color: #f5b719 !important;
+  --red-color: #dc2626 !important;
 }
 
 body {
@@ -59,6 +59,7 @@ main {
   padding: 1.75rem;
   border-radius: 0.375rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
 }
 
 #bmi-form {
@@ -137,4 +138,16 @@ button {
   color: var(--primary-color);
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+.text-green {
+  color: var(--green-color);
+}
+
+.text-yellow {
+  color: var(--yellow-color);
+}
+
+.text-red {
+  color: var(--red-color);
 }

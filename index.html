@@ -23,16 +23,6 @@
             </div>
 
             <div>
-              <label for="bb" class="d-block">Berat Badan (kg)</label>
-              <input
-                type="number"
-                name="bb"
-                id="bb"
-                placeholder="Masukkan berat badan"
-              />
-            </div>
-
-            <div>
               <label for="usia" class="d-block">Usia (tahun)</label>
               <input
                 type="number"
@@ -43,21 +33,40 @@
             </div>
 
             <div>
+              <label for="bb" class="d-block">Berat Badan (kg)</label>
+              <input
+                type="number"
+                name="bb"
+                id="bb"
+                placeholder="Masukkan berat badan"
+                required
+              />
+            </div>
+
+            <div>
               <label for="tb" class="d-block">Tinggi Badan (cm)</label>
               <input
                 type="number"
                 name="tb"
                 id="tb"
                 placeholder="Masukkan tinggi badan"
+                required
               />
             </div>
 
             <div class="button-group">
               <button type="submit">Hitung BMI</button>
-              <button type="submit" class="reset">Reset</button>
+              <button type="button" class="reset">Reset</button>
             </div>
           </form>
         </div>
+        <p style="margin-bottom: 1rem">
+          Calculator Body Mass Index (BMI) adalah alat yang membantu Anda
+          memperkirakan apakah berat badan Anda sehat untuk tinggi badan Anda.
+          Masukkan berat badan dan tinggi badan Anda di atas ini untuk
+          menghitung BMI dan lihat apakah Anda termasuk dalam kisaran yang
+          sehat.
+        </p>
       </section>
 
       <section>
@@ -65,21 +74,18 @@
         <div id="result-container">
           <div id="result">
             <h3>Hasil BMI Kamu:</h3>
-            <p id="bmi-result">21.1</p>
-            <h1 id="bmi-detail">Normal</h1>
+            <p id="bmi-result">-</p>
+            <h1 id="bmi-category"></h1>
           </div>
 
           <div>
-            <p id="bmi-desc">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
-              expedita quo maxime itaque cum officiis, maiores sunt adipisci
-              tenetur praesentium fuga aut optio eligendi amet dolorem,
-              dignissimos animi molestiae illo!
-            </p>
+            <p id="bmi-description"></p>
           </div>
         </div>
       </section>
     </main>
+
+    <a href="" id="link"><i class="fa-brands fa-github fa-2xl"></i></a>
 
     <script src="js/script.js"></script>
   </body>
