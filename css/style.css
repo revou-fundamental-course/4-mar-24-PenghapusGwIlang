@@ -10,6 +10,9 @@
   --secondary-color: #94a3b8;
   --tertiary-color: #f1f5f9;
   --stroke-color: #cbd5e1;
+  --green-color: #008137;
+  --yellow-color: #fbbf24;
+  --red-color: #dc2626;
 }
 
 body {
@@ -20,6 +23,16 @@ h1 {
   color: var(--primary-color);
   margin-bottom: 1.5rem;
   font-weight: 600;
+}
+
+h3 {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+p {
+  color: var(--primary-color);
+  font-weight: 400;
 }
 
 .d-block {
@@ -44,6 +57,8 @@ main {
   gap: 1rem;
   background-color: var(--tertiary-color);
   padding: 1.75rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #bmi-form {
@@ -65,6 +80,18 @@ input[type="number"] {
   border-radius: 0.375rem;
   width: 100%;
   box-sizing: border-box;
+  font-size: medium;
+  color: var(--primary-color);
+}
+
+input[type="number"]::placeholder {
+  color: var(--secondary-color);
+  font-size: medium;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border: 2px solid var(--secondary-color);
 }
 
 button {
@@ -73,11 +100,41 @@ button {
   border-radius: 0.375rem;
   background-color: var(--primary-color);
   color: #fff;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
+  font-size: small;
 }
 
 .reset {
   background-color: #94a3b8;
   color: var(--primary-color);
+}
+
+#result-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#result {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--tertiary-color);
+  padding: 1.75rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#result {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+#result p {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 500;
 }
