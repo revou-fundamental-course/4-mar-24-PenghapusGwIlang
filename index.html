@@ -11,14 +11,14 @@
       <section>
         <h1>BMI Calculator</h1>
         <div id="form-container">
-          <form id="bmi-form">
+          <form method="POST" id="bmi-form">
             <div>
               <label for="jk" class="d-block">Jenis Kelamin</label>
 
-              <input type="radio" name="jk" id="jkpria" />
+              <input type="radio" name="jk" id="jkpria" required />
               <label for="jkpria">Pria</label>
 
-              <input type="radio" name="jk" id="jkwanita" />
+              <input type="radio" name="jk" id="jkwanita" required />
               <label for="jkwanita">Wanita</label>
             </div>
 
@@ -29,6 +29,7 @@
                 name="usia"
                 id="usia"
                 placeholder="Masukkan usia"
+                required
               />
             </div>
 

@@ -1,6 +1,6 @@
 const calcBMI = (weight, height) => {
   return weight / Math.pow(height / 100, 2)
-}
+} // Fungsi untuk menghitung BMI
 
 const bmiDescription = {
   underweight:
@@ -11,42 +11,39 @@ const bmiDescription = {
     "Berat badan Anda sedikit di atas ideal. Hal ini dapat meningkatkan risiko kesehatan seperti penyakit jantung, diabetes tipe 2, dan tekanan darah tinggi. Konsultasikan dengan dokter atau ahli gizi untuk mendapatkan program diet dan olahraga yang tepat untuk menurunkan berat badan secara bertahap.",
   Obesity:
     "Berat badan Anda tergolong obesitas. Hal ini dapat meningkatkan risiko kesehatan yang serius seperti penyakit jantung, stroke, diabetes tipe 2, dan kanker. Konsultasikan dengan dokter atau ahli gizi untuk mendapatkan program diet dan olahraga yang intensif untuk menurunkan berat badan secara signifikan. Dalam beberapa kasus, pengobatan medis mungkin diperlukan.",
-}
+} // Deskripsi BMI
 
-const categoryBMI = document.querySelector("#bmi-category")
+const descriptionBMI = document.querySelector("#bmi-description") // Selector untuk menampilkan deskripsi BMI
+const categoryBMI = document.querySelector("#bmi-category") // Selector untuk menampilkan kategori BMI
 const bmiCategory = (bmi) => {
   if (bmi < 18.5) {
     categoryBMI.classList.add("text-yellow")
     categoryBMI.classList.remove("text-red")
     categoryBMI.classList.remove("text-green")
-    document.querySelector("#bmi-description").textContent =
-      bmiDescription.underweight
+    descriptionBMI.textContent = bmiDescription.underweight
     return "Underweight"
   } else if (bmi < 24.9) {
     categoryBMI.classList.remove("text-yellow")
     categoryBMI.classList.remove("text-red")
     categoryBMI.classList.add("text-green")
-    document.querySelector("#bmi-description").textContent =
-      bmiDescription.normal
+    descriptionBMI.textContent = bmiDescription.normal
     return "Normal"
   } else if (bmi < 29.9) {
     categoryBMI.classList.add("text-yellow")
     categoryBMI.classList.remove("text-red")
     categoryBMI.classList.remove("text-green")
-    document.querySelector("#bmi-description").textContent =
-      bmiDescription.overweight
+    descriptionBMI.textContent = bmiDescription.overweight
     return "Overweight"
   } else {
     categoryBMI.classList.remove("text-yellow")
     categoryBMI.classList.add("text-red")
     categoryBMI.classList.remove("text-green")
-    document.querySelector("#bmi-description").textContent =
-      bmiDescription.Obesity
+    descriptionBMI.textContent = bmiDescription.Obesity
     return "Obesity"
   }
-}
+} // Fungsi untuk menentukan kategori BMI
 
-const bmiForm = document.querySelector("#bmi-form")
+const bmiForm = document.querySelector("#bmi-form") // Selector untuk form BMI
 
 function handleSubmit(e) {
   e.preventDefault()
@@ -58,7 +55,7 @@ function handleSubmit(e) {
 
   document.querySelector("#bmi-result").textContent = bmi.toFixed(1)
   categoryBMI.innerHTML = category
-}
+} // Fungsi untuk menampilkan hasil BMI
 
 function reset(e) {
   e.preventDefault()
@@ -66,7 +63,7 @@ function reset(e) {
   document.querySelector("#bmi-result").innerHTML = "-"
   categoryBMI.textContent = ""
   bmiForm.reset()
-}
+} // Fungsi untuk mereset form dan hasil BMI
 
-bmiForm.addEventListener("submit", handleSubmit)
-document.querySelector(".reset").addEventListener("click", reset)
+bmiForm.addEventListener("submit", handleSubmit) // Event listener ketika form BMI di submit
+document.querySelector(".reset").addEventListener("click", reset) // Event listener ketika tombol reset di klik
